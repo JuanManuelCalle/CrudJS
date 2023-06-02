@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/alternativo.css">
+	<title>Hardware Signals</title>
+	<link rel="shortcut icon" href="../img/desktop-regular-24.png" type="image/x-icon">
+</head>
+<body>
+	
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="./dashboard.html" class="brand"><i class='bx bx-desktop icon'></i> Hardware Signals</a>
+		<ul class="side-menu">
+			<li><a href="./dashboard.html" class="active"><i class='bx bxs-dashboard icon' ></i>Dashboard</a></li>
+			<li class="divider" data-text="main">Principal</li>
+			<li><a href="#"><i class='bx bx-dollar icon' ></i> Detalle de ventas</a></li>
+			<li><a href="#"><i class='bx bxs-plus-square icon' ></i> Crear nueva venta</a></li>
+			<li><a href="../index.html"><i class='bx bx-log-out-circle icon'></i> Cerrar sesión</a></li>
+		</ul>
+		<div class="ads">
+			<div class="wrapper">
+				<a href="#" class="btn-upgrade">Cambiar a pro</a>
+				<p>Hágase miembro <span>PRO</span> y disfrute de <span>Todas las funciones</span></p>
+			</div>
+		</div>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' ></i>
+			<form action="#">
+				<div class="form-group">
+					<input type="text" placeholder="Buscar...">
+					<i class='bx bx-search icon' ></i>
+				</div>
+			</form>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-bell icon' ></i>
+				<span class="notificaciones">5</span>
+			</a>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-message-square-dots icon' ></i>
+				<span class="notificaciones">8</span>
+			</a>
+			<span class="divider"></span>
+			<div class="profile">
+				<a href="../views/perfil.html"><img src="../img/perfil.avif" alt="Foto perfil"></a>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<h1 class="title">Dashboard</h1>
+			<ul class="breadcrumbs">
+				<li><a href="./dashboard.html">Inicio</a></li>
+				<li class="divider">/</li>
+				<li><a href="./dashboard.html" class="active">Dashboard</a></li>
+			</ul>
+			<div class="info-card">
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>4500</h2>
+							<p>Ventas totales</p>
+						</div>
+						<i class='bx bx-bar-chart icon' ></i>
+					</div>
+					<span class="progress" data-value="95%"></span>
+					<span class="label">95%</span>
+				</div>
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>345</h2>
+							<p>Ventas pendientes</p>
+						</div>
+						<i class='bx bx-time icon warning' ></i>
+					</div>
+					<span class="progress" data-value="60%"></span>
+					<span class="label">60%</span>
+				</div>
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>75</h2>
+							<p>Ventas canceladas</p>
+						</div>
+						<i class='bx bx-x-circle icon cancel' ></i>
+					</div>
+				</div>
+				<div class="card">
+					<div class="head">
+						<div>
+							<h2>120</h2>
+							<p>Ventas realizadas este mes</p>
+						</div>
+						<i class='bx bx-trending-up icon' ></i>
+					</div>
+					<span class="progress" data-value="20%"></span>
+					<span class="label">20%</span>
+				</div>
+			</div>
+			<div class="data">
+				<div class="content-data">
+					<div class="head">
+						<h3>Usuarios activos</h3>
+						<div class="menu">
+							<button type="button" class="btn btn-success btn-add" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class='bx bx-plus'></i></button>
+						</div>
+					</div>
+					<div class="users">
+						<table id="users" class="table table-dark table-striped f-black" style="width:100%">
+							<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Correo</th>
+									<th>Teléfono</th>
+									<th>Usuario</th>
+									<th>Contraseña</th>
+									<th>Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+		<!-- MODAL AGREGAR NUEVO -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel">Agregar nuevo usuario <i class='bx bx-user-plus usericon'></i></h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form id="Agregarusuario">
+							<div class="mb-3">
+								<label for="nombre" class="form-label">Nombre</label>
+								<input type="text" class="form-control br-solid" id="nombre">
+							</div>
+							<div class="mb-3">
+								<label for="correo" class="form-label">Correo</label>
+								<input type="email" class="form-control br-solid" id="correo">
+							</div>
+							<div class="mb-3">
+								<label for="telefono" class="form-label">Teléfono</label>
+								<input type="text" class="form-control br-solid" id="telefono">
+							</div>
+							<div class="mb-3">
+								<label for="usuario" class="form-label">Usuario</label>
+								<input type="text" class="form-control br-solid" id="usuario">
+							</div>
+							<div class="mb-3">
+								<label for="contrasena" class="form-label">Contraseña</label>
+								<input type="password" class="form-control br-solid" id="contrasena">
+							</div>
+							<button type="submit" class="btn btn-primary btn-modal">Guardar usuario</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN MODAL AGREGAR NUEVO -->
+	</section>
+	<!-- NAVBAR -->
+
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+	<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bulma.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="../js/script.js"></script>
+</body>
+</html>
