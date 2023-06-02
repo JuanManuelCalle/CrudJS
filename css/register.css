@@ -228,8 +228,6 @@ background-color: #0081C9;
 color: white;
 }
 
-/* Media Query para hacerlo responsive */
-
 @media (max-width: 768px) {
 .formulario {
   padding: 43px 20px 93px 20px;
